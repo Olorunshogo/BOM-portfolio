@@ -1,0 +1,375 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== PREDEFINED SETTINGS */
+:root {
+    --black-bg-900: #f2f2fc;
+    --black-bg-100: #fdf9ff;
+    --black-bg-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: "Poppins", sans-serif;
+    color: #eee;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.main-container {
+    padding-left: 270px;
+}
+
+/* ===== UNIVERSAL SELECTOR ===== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+/* ===== LINKS ===== */
+a {
+    text-decoration: none;
+    cursor:pointer;
+}
+
+/* ===== UNORDERED LISTS ===== */
+ul {
+    list-style-type: none;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--skin-colour);
+    padding: 12px 35px;
+    color: #fff;
+    border-radius: 20px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 270px;
+    height: 100%;
+    background-color: var(--black-bg-100);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    border-right: 1px solid var(--black-bg-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+        /* ===== SIDEBAR Logo ===== */
+.sidebar .logo {
+    position: absolute;
+    top: 50px;
+    font: 30px;
+    text-transform: capitalize;
+}
+
+.sidebar .logo a {
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 27px;
+    letter-spacing: 5px;
+}
+
+.sidebar .logo a::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-colour);
+    border-left: 5px solid var(--skin-colour);
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar .logo a::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-colour);
+    border-right: 5px solid var(--skin-colour);
+    top: 0;
+    right: 0;
+}
+
+.sidebar .logo a .bom {
+    font-family: "Clicker Script", cursive;
+    font-size: 40px;
+    padding: 15px 20px;
+}
+        /* ===== SIDEBAR Navigation Toggler ===== */
+.sidebar .hamburger {
+    width: 50px;
+    height: 40px;
+    border: 1px solid var(--black-bg-50);
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--black-bg-100);
+    cursor: pointer;
+}
+
+.sidebar .hamburger i.fa-solid.fa-bars {
+    width: 26px;
+    font-size: 22px;
+    height: 25px;
+    color: var(--skin-colour);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        
+/* ===== SIDEBAR Navigation ===== */
+.sidebar .nav {
+    margin-top: 0px;
+}
+
+.sidebar .nav li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar .nav li a {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--black-bg-50);
+    color: var(--text-black-900);
+    padding: 5px 15px;
+}
+
+.sidebar .nav li a.active {
+    color: var(--skin-colour);
+}
+
+.sidebar .nav li a i {
+    margin-right: 15px;
+}
+
+/* ===== SECTION ===== */
+.section {
+    background-color: var(--black-bg-900);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    opacity: 1; 
+}
+
+.home .width-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+/* ===== HOME ===== */
+.home {
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* ===== SET MAX-WIDTH OF THE WHOLE PAGE ===== */
+
+.home .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+.home .row .home-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.home .row .home-info h3.intro {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.home .row .home-info h3.intro span.name {
+    font-family: "Clicker Script", cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--skin-colour);
+}
+
+.home .row .home-info h3.my-profession {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.home .row .home-info h3.my-profession span.web-dev {
+    color: var(--skin-colour);
+}
+
+.home .row .home-info p {
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--text-black-700);
+
+}
+
+.home .row .home-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+} 
+
+.home .row .home-img::after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid var(--skin-colour);
+    border-right: 10px solid var(--skin-colour);
+    right: 20px;
+    bottom: -40px;
+}
+
+.home .row .home-img::before {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--skin-colour);
+    border-left: 10px solid var(--skin-colour);
+    left: 20px;
+    top: -40px;
+}
+
+.home .row .home-img img {
+    height: 400px;
+} 
+
+/* ===== ABOUT ME ===== */
+.about {
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.about .container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.about .section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.about .section-title h2 {
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+
+.about .section-title h2:before {
+    content: "";
+    height: 4px;
+    width: 50px;
+    background-color: var(--skin-colour);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.about .section-title h2:after {
+    content: "";
+    height: 5px;
+    width: 25px;
+    background-color: var(--skin-colour);
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+}
+
+.about .about-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-text h3
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .sidebar {
+        width: 50px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .main-container {
+        padding-left: 50px;
+    }
+}
+
