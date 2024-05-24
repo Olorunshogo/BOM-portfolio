@@ -17,12 +17,19 @@
     <div class="main-container">
         <!-- ===== Sidebar Start ===== -->
         <div class="sidebar" title="Sidebar">
+            <!-- ===== Logo Start ===== -->
             <div class="logo" title="Logo">
                 <a href="#"><span class="bom">BOM</span>oses</a>
             </div>
+            <!-- ===== Logo End ===== -->
+
+            <!-- ===== Hamburger Icon Start ===== -->
             <div class="hamburger" title="Navigation toggler">
                 <i class="fa-solid fa-bars"></i>
             </div>
+            <!-- ===== Hamburger Icon End ===== -->
+
+            <!-- ===== Navigation Links Start ===== -->
             <ul class="nav" title="Navigation">
                 <li title="Home"><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
                 <li title="About"><a href="#about"><i class="fa fa-user"></i>About</a></li>
@@ -30,6 +37,7 @@
                 <li title="Portfolio"><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
                 <li title="Contact"><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
+            <!-- ===== Navigation Links End ===== -->
         </div>
         <!-- ===== Sidebar End ===== -->
 
@@ -39,6 +47,7 @@
             <section class="home section hidden">
                 <div class="width-container">
                     <div class="row">
+                        <!-- ===== Introduction Start ===== -->
                         <div class="home-info padd-15">
                             <h3 class="intro">Hello, my name is <span class="name">BAMTEFA, Olorunshogo Moses</span></h3>
                             <h3 class="my-profession">I am a <span class="web-dev"> web developer</span></h3>
@@ -46,9 +55,13 @@
                                 My strength is to create web designs and turn them to responsive and dynamic websites or web pages.</p>
                             <a href="#contact" class="btn hire-me">Hire Me</a>
                         </div>
+                        <!-- ===== Introduction End ===== -->
+
+                        <!-- ===== Image Start ===== -->
                         <div class="home-img padd-15">
                             <img src="/images/Home image.jpeg" alt="My personal portrait">
                         </div>
+                        <!-- ===== Image End ===== -->
                     </div>
                 </div>
             </section>
@@ -58,17 +71,20 @@
             <section class="about section">
                 <div class="width-container">
                     <div class="container">
+                        <!-- ===== Title Start ===== -->
                         <div class="row">
                             <div class="section-title padd-15">
                                 <h2>About Me</h2>
-                            </div>
+                            </div>                            
                         </div>
+                        <!-- ===== Title End ===== -->
 
+                        <!-- ===== Content Container Start ===== -->
                         <div class="row">
                             <div class="about-content padd-15">
                                 <div class="row">
                                     <div class="about-text padd-15">
-                                        <h3>My name is BAMTEFA, Olorunshogo Moses and I am a <span>web developer</span> </h3>
+                                        <h3>My name is BAMTEFA, Olorunshogo Moses and I am a <span class="web-dev"> web developer</span> </h3>
                                         <p>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum!
                                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, doloremque.
@@ -78,8 +94,109 @@
                                         </p>
                                     </div>
                                 </div>
+                                <div class="row info-skills-container">
+                                    <!-- ===== Personal Information Start ===== -->
+                                    <div class="personal-info padd-15">
+                                        <div class="row">
+                                            <div class="info-item">
+                                                <p>Birthday: <span>July 12, 1999</span></p>
+                                            </div>
+                                            <div class="info-item">
+                                                <p>Age: <span id="currentAge"></span></p>
+                                            </div>
+                                            <div class="info-item">
+                                                <p>Phone: <span>+234(0)70 1228 8798</span></p>
+                                            </div>
+                                            <div class="info-item">
+                                                <p>Email: <span>info@mygmail.com</span></p>
+                                            </div>
+                                            <div class="info-item">
+                                                <p>Address: <span>Nigeria</span></p>
+                                            </div>                                          
+                                            <div class="info-item">
+                                                <p>Degree: <span>MEE</span></p>
+                                            </div>                                                                                         
+                                            <div class="info-item">
+                                                <p>Position: <span>Frontend Web developer Intern</span></p>
+                                            </div>                                              
+                                            <div class="info-item">
+                                                <p>Website: <span>www.mywebsite.com</span></p>
+                                            </div>                                          
+                                        </div>
+                                        <div class="row">
+                                            <div class="buttons">
+                                                <a href="#" class="btn">Download CV</a>
+                                                <a href="#contact" class="btn hire-me">Hire Me</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ===== Personal Information ===== -->
+
+                                    <!-- ===== Skills Start ===== -->
+                                    <div class="skills padd-15">
+                                        <div class="row">
+                                            <div class="skill-item padd-15">
+                                                <h5>HTML</h5>
+                                                <div class="progress">
+                                                    <div class="progress-in" id="html-progress"><span></span></div>
+                                                    <div class="skill-percent"><span>92%</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="skill-item padd-15">
+                                                <h5>CSS</h5>
+                                                <div class="progress">
+                                                    <div class="progress-in" id="css-progress"><span></span></div>
+                                                    <div class="skill-percent"><span>84%</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="skill-item padd-15"id="html-progress">
+                                                <h5>JS</h5>
+                                                <div class="progress">
+                                                    <div class="progress-in" id="js-progress"><span></span></div>
+                                                    <div class="skill-percent"><span>20%</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="skill-item padd-15">
+                                                <h5>Vue</h5>
+                                                <div class="progress">
+                                                    <div class="progress-in" id="vue-progress"><span></span></div>
+                                                    <div class="skill-percent"><span>3%</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ===== Skills End ===== -->
+                                </div>
+
+                                <!-- ===== Education Start ===== -->
+                                <div class="row ed-ex">
+                                    <div class="education padd-15">
+                                        <h3 class="title">Education</h3>
+                                        <div class="row">
+                                            <div class="timeline-box">
+                                                <div class="timeline shadow-dark">
+                                                    <!-- Timeline Item -->
+                                                    <div class="timeline-item">
+                                                        <div class="circle-dot">
+                                                            <h3 class="timeline-date">
+                                                                <i class="fa fa-calendar"></i> 2016 - 2023
+                                                            </h3>
+                                                            <h4 class="timeline-title">B.Tech MEE, Federal University of Technology, Minna, Niger State, Nigeria.</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="experience padd-15">
+                                        <h3 class="title">Experience</h3>
+                                    </div>
+                                </div>
+                                <!-- ===== Education End ===== -->
                             </div>
                         </div>
+                        <!-- ===== Content Container End ===== -->
                     </div>
                 </div>
             </section>
