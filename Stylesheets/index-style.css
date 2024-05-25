@@ -602,12 +602,18 @@ ul {
 }
 
 /* ===== SERVICES SECTION ===== */
+.service .container {
+    padding-bottom: 30px;
+}
+
+/* ===== Service individual container ===== */
 .service .service-item {
     margin-bottom: 30px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
 }
 
+/* ===== Service individual inner container ===== */
 .service .service-item .service-item-inner {
     border-radius: 10px;
     padding: 30px 15px;
@@ -620,6 +626,111 @@ ul {
 .service .service-item .service-item-inner:hover {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+
+.service .service-item .service-item-inner .icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    transition: var(--transition-4);
+}
+
+/* ===== Service individual inner icon container ===== */
+.service .service-item .service-item-inner:hover .icon {
+    background-color: var(--skin-colour);
+}
+
+/* ===== Service individual inner icon ===== */
+.service .service-item .service-item-inner .icon i.fa {
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-colour);
+    transition: var(--transition-3);
+}
+
+.service .service-item .service-item-inner:hover .icon i.fa {
+    color: var(--white);
+    font-size: 25px;
+}
+
+/* ===== Service individual inner header ===== */
+.service .service-item .service-item-inner h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-2);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* ===== Service individual inner paragraph ===== */
+.service .service-item .service-item-inner p {
+    font-size: 16px;
+    color: var(--text-black-2);
+    line-height: 25px;
+}
+
+/* ===== PORTFOLIO SECTION ===== */
+.portfolio .container {
+    padding-bottom: 40px;
+}
+
+/* ===== Portfolio heading container ===== */
+.portfolio .portfolio-heading {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+/* ===== Portfolio heading ===== */
+.portfolio .portfolio-heading h2 {
+    color: var(--text-black-2);
+    font-weight: 500;
+}
+
+/* ===== Portfolio item outer container ===== */
+.portfolio .portfolio-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+
+/* ===== Portfolio item inner container ===== */
+.portfolio .portfolio-item .portfolio-item-inner {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition-4);
+}
+
+/* ===== Portfolio image container ===== */
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img {
+    width: 100%;
+    height: 250px;
+    transition: var(--transition-4);
+}
+
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img:hover {
+    border: 6px solid var(--black-bg-2);
+}
+
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ===== Portfolio paragraph that contains the live link ===== */
+.portfolio .portfolio-item .description {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.portfolio .portfolio-item .description .live-link {
+    text-decoration: underline;
+    font-size: 14px;
+} 
 
 
 
