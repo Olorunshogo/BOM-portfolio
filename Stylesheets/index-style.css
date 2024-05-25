@@ -42,19 +42,20 @@ body {
     box-sizing: border-box;
 }
 
-        /* ===== UTILITY STYLES ===== */
+/* ===== UTILITY STYLES ===== */
+
 /* ===== LINKS ===== */
 a {
     text-decoration: none;
     cursor:pointer;
 }
 
-/* ===== UNORDERED LISTS ===== */
+/* ===== Unordered Lists ===== */
 ul {
     list-style-type: none;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== Buttons ===== */
 .btn {
     font-size: 16px;
     font-weight: 500;
@@ -66,33 +67,35 @@ ul {
     white-space: nowrap;
     border: none;
     outline: none;
+    cursor: pointer;
     transition: var(--transition-3);
 }
 
 .btn:hover {
-    transform: scale(0.9);
-}
-
-.btn:active {
     transform: scale(0.95);
 }
 
-/* ===== DARK BOX-SHADOW ===== */
+.btn:active {
+    transform: scale(0.90);
+}
+
+/* ===== Dark Box-shadow ===== */
 .shadow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
-/* ===== DISPLAY: NONE; */
+/* ===== Display: None; */
 .hidden {
     display: none !important;
 }
 
-/* =====PADDING LEFT AND RIGHT; */
+/* ===== Padding-left and Right; */
 .padd-15 {
     padding-left: 15px;
     padding-right: 15px;
 }
 
+/* ===== Row ===== */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -229,6 +232,7 @@ ul {
     min-height: 100vh;
     display: flex;
     color: var(--text-black-2);
+    cursor: default;
 }
 
 .home .width-container {
@@ -237,17 +241,7 @@ ul {
     margin: auto;
 }
 
-/* ===== Home content container  ===== */
-.home .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
-    position: relative;
-}
-
-/* ===== Home information  ===== */
+/* ===== Home Information  ===== */
 .home .row .home-info {
     flex: 0 0 60%;
     max-width: 60%;
@@ -282,7 +276,7 @@ ul {
 
 }
 
-/* ===== Home image to the right  ===== */
+/* ===== Home Image to the Right  ===== */
 .home .row .home-img {
     flex: 0 0 40%;
     max-width: 40%;
@@ -324,6 +318,7 @@ ul {
     flex-direction: column;
 }
 
+/* ===== EACH SECTION HEADING ===== */
 .section-title {
     flex: 0 0 100%;
     max-width: 100%;
@@ -361,15 +356,16 @@ ul {
 .about {
     min-height: 100vh;
     color: var(--text-black-2);
+    cursor: default;
 }
 
-/* ===== About me contents ===== */
+/* ===== About Me Contents ===== */
 .about .about-content {
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-/* ===== About me texts ===== */
+/* ===== About Me Texts ===== */
 .about .about-content .about-text {
     flex: 0 0 100%;
     max-width: 100%;
@@ -393,13 +389,13 @@ ul {
     line-height: 25px;
 }
 
-/* ===== About me personal information and skills container ===== */
+/* ===== About Me Personal Information and Skills Container ===== */
 .about .about-content .info-skills-container {
     display: flex;
     flex-direction: row;
 }
 
-/* ===== About me personal information container ===== */
+/* ===== About Me Personal Information Container ===== */
 .about .about-content .personal-info {
     flex: 0 0 60%;
     max-width: 60%;
@@ -414,6 +410,7 @@ ul {
 .about .about-content .personal-info .row .info-item {
     flex: 0 0 100%;
     max-width: 100%;
+    cursor:default;
 }
 
 .about .about-content .personal-info .row .info-item p {
@@ -430,6 +427,7 @@ ul {
     color: var(--text-black-1);
 }
 
+/* ===== About Me Personal Information Buttons Container ===== */
 .about .about-content .personal-info .buttons {
     display: flex;
     flex-direction: row;
@@ -443,7 +441,7 @@ ul {
     margin-top: 10px;
 }
 
-/* ===== About me skills container ===== */
+/* ===== About Me Skills Container ===== */
 .about .about-content .skills {
     flex: 0 0 40%;
     max-width: 40%;
@@ -481,18 +479,18 @@ ul {
     background-color: var(--skin-colour);
 }
 
-/* ===== About me individual skills progress container ===== */
+/* ===== About Me Individual Skills Progress Container ===== */
 .about .about-content .skills .skill-item .progress #html-progress {
-    width: 92%;
+    width: 94%;
 }
 .about .about-content .skills .skill-item .progress #css-progress {
-    width: 84%;
+    width: 90%;
 }
 .about .about-content .skills .skill-item .progress #js-progress {
-    width: 20%;
+    width: 35%;
 }
 .about .about-content .skills .skill-item .progress #vue-progress {
-    width: 3%;
+    width: 6%;
 }
 
 .about .about-content .skills .skill-item .progress .skill-percent {
@@ -504,7 +502,7 @@ ul {
     line-height:  40px;
 }
 
-/* ===== About me education and experience container ===== */
+/* ===== About Me Education and Experience Container ===== */
 .about .about-content .row.ed-ex {
     width: 100%;
     max-width: 100%;
@@ -527,7 +525,7 @@ ul {
     color: var(--text-black-2);
 }
 
-/* ===== About me education and experience container  ===== */
+/* ===== About Me Education and Experience Container  ===== */
 .about .about-content .timeline-box {
     flex: 0 0 100%;
     max-width: 100%;
@@ -542,7 +540,7 @@ ul {
     position: relative;
 }
 
-/* ===== About me education and experience timeline item container  ===== */
+/* ===== About Me Education and Experience Timeline Item Container  ===== */
 .about .about-content .timeline .timeline-item,
 .about .about-content .timeline .experience-item {
     position: relative;
@@ -565,7 +563,7 @@ ul {
     background-color: var(--skin-colour);
 }
 
-/* ===== About me education and experience circledot  ===== */
+/* ===== About Me Education and Experience Circledot  ===== */
 .about .about-content .timeline .circle-dot {
     position: absolute;
     left: 0;
@@ -604,16 +602,17 @@ ul {
 /* ===== SERVICES SECTION ===== */
 .service .container {
     padding-bottom: 30px;
+    cursor: default;
 }
 
-/* ===== Service individual container ===== */
+/* ===== Service Individual Container ===== */
 .service .service-item {
     margin-bottom: 30px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
 }
 
-/* ===== Service individual inner container ===== */
+/* ===== Service Individual Inner Container ===== */
 .service .service-item .service-item-inner {
     border-radius: 10px;
     padding: 30px 15px;
@@ -637,12 +636,11 @@ ul {
     transition: var(--transition-4);
 }
 
-/* ===== Service individual inner icon container ===== */
+/* ===== Service Individual Inner Icon Container ===== */
 .service .service-item .service-item-inner:hover .icon {
     background-color: var(--skin-colour);
 }
 
-/* ===== Service individual inner icon ===== */
 .service .service-item .service-item-inner .icon i.fa {
     font-size: 40px;
     line-height: 60px;
@@ -655,7 +653,6 @@ ul {
     font-size: 25px;
 }
 
-/* ===== Service individual inner header ===== */
 .service .service-item .service-item-inner h4 {
     font-size: 18px;
     margin-bottom: 15px;
@@ -664,7 +661,6 @@ ul {
     text-transform: capitalize;
 }
 
-/* ===== Service individual inner paragraph ===== */
 .service .service-item .service-item-inner p {
     font-size: 16px;
     color: var(--text-black-2);
@@ -676,35 +672,34 @@ ul {
     padding-bottom: 40px;
 }
 
-/* ===== Portfolio heading container ===== */
+/* ===== Portfolio Heading Container ===== */
 .portfolio .portfolio-heading {
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 40px;
 }
 
-/* ===== Portfolio heading ===== */
 .portfolio .portfolio-heading h2 {
     color: var(--text-black-2);
     font-weight: 500;
 }
 
-/* ===== Portfolio item outer container ===== */
+/* ===== Portfolio Item Outer Container ===== */
 .portfolio .portfolio-item {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
 }
 
-/* ===== Portfolio item inner container ===== */
+/* ===== Portfolio Item Inner Container ===== */
 .portfolio .portfolio-item .portfolio-item-inner {
     border-radius: 10px;
     overflow: hidden;
-    cursor: pointer;
+    cursor: default;
     transition: var(--transition-4);
 }
 
-/* ===== Portfolio image container ===== */
+/* ===== Portfolio Image Container ===== */
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-img {
     width: 100%;
     height: 250px;
@@ -721,7 +716,7 @@ ul {
     display: block;
 }
 
-/* ===== Portfolio paragraph that contains the live link ===== */
+/* ===== Portfolio Paragraph That Contain the Live Link ===== */
 .portfolio .portfolio-item .description {
     margin-top: 8px;
     font-size: 16px;
@@ -732,14 +727,119 @@ ul {
     font-size: 14px;
 } 
 
+/* ===== CONTACT SECTION ===== */
+.contact {
+    cursor: default;
+}
+
+/* ===== Contact Row Title ===== */
+.contact .contact-title {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: var(--skin-colour);
+    text-transform: capitalize;
+}
+
+/* ===== Contact Row sub-Title ===== */
+.contact .contact-sub-title {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 60px;
+    color: var(--text-black-2);
+    text-transform: uppercase;
+}
+
+/* ===== Contact Information Item ===== */
+.contact .contact-info-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact .contact-info-item .icon {
+    display: inline-block;
+}
+
+.contact .contact-info-item .icon .fa {
+    font-size: 25px;
+    color: var(--skin-colour);
+}
+
+.contact .contact-info-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--text-black-2);
+    margin: 15px 0 5px;
+}
+
+.contact .contact-info-item p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-black-1);
+    line-height: 25px;
+}
+
+.contact .contact-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.contact .contact-form  .col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.contact .contact-form .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.contact .contact-form .form-item {
+    margin-bottom: 30px;
+}
+
+.contact .contact-form .form-item .form-control {
+    width: 95%;
+    height: 50px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--black-bg-1);
+    border-radius: 25px;
+    padding: 10px 25px;
+    caret-color: var(--text-black-2);
+    background-color: var(--black-bg-2);
+    transition: var(--transition-4);
+}
+
+.contact .contact-form .form-item .form-control:focus {
+    border: 1px solid var(--black-bg-1);
+    width: 100%;
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.contact .contact-form .form-item .form-control::placeholder {
+    font-size: 14px;
+}
+
+.contact .contact-form .form-item textarea.form-control {
+    height: 100px;
+}
+
+.contact .contact-form .btn {
+    height: 50px;
+    padding: 0 50px;
+}
 
 
 
 
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1300px) {
     .sidebar {
-        width: 50px;
+        width: 100px;
     }
 
     .logo {
@@ -747,7 +847,7 @@ ul {
     }
 
     .main-container {
-        padding-left: 50px;
+        padding-left: 100px;
     }
 }
 
