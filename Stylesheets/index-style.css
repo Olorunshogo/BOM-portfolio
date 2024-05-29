@@ -59,7 +59,7 @@ ul {
 .btn {
     font-size: 16px;
     font-weight: 500;
-    background-color: var(--skin-colour);
+    background-color: var(--theme-colour);
     padding: 12px 35px;
     color: var(--white);
     border-radius: 20px;
@@ -72,11 +72,11 @@ ul {
 }
 
 .btn:hover {
-    transform: scale(0.95);
+    transform: scale(0.97);
 }
 
 .btn:active {
-    transform: scale(0.90);
+    transform: scale(0.94);
 }
 
 /* ===== Dark Box-shadow ===== */
@@ -139,8 +139,8 @@ ul {
     position: absolute;
     width: 20px;
     height: 20px;
-    border-bottom: 5px solid var(--skin-colour);
-    border-left: 5px solid var(--skin-colour);
+    border-bottom: 5px solid var(--theme-colour);
+    border-left: 5px solid var(--theme-colour);
     bottom: 0;
     left: 0;
 }
@@ -150,8 +150,8 @@ ul {
     position: absolute;
     width: 20px;
     height: 20px;
-    border-top: 5px solid var(--skin-colour);
-    border-right: 5px solid var(--skin-colour);
+    border-top: 5px solid var(--theme-colour);
+    border-right: 5px solid var(--theme-colour);
     top: 0;
     right: 0;
 }
@@ -182,7 +182,7 @@ ul {
     width: 26px;
     font-size: 22px;
     height: 25px;
-    color: var(--skin-colour);
+    color: var(--theme-colour);
     position: relative;
     display: flex;
     align-items: center;
@@ -210,7 +210,7 @@ ul {
 }
 
 .sidebar .nav li a.active {
-    color: var(--skin-colour);
+    color: var(--theme-colour);
 }
 
 .sidebar .nav li a i {
@@ -254,7 +254,7 @@ ul {
     font-family: "Clicker Script", cursive;
     font-size: 30px;
     font-weight: 700;
-    color: var(--skin-colour);
+    color: var(--theme-colour);
 }
 
 .home .row .home-info h3.my-profession {
@@ -263,7 +263,7 @@ ul {
 }
 
 .home .row .home-info span.web-dev {
-    color: var(--skin-colour);
+    color: var(--theme-colour);
     text-transform: capitalize;
 }
 
@@ -287,8 +287,8 @@ ul {
     position: absolute;
     height: 80px;
     width: 80px;
-    border-bottom: 10px solid var(--skin-colour);
-    border-right: 10px solid var(--skin-colour);
+    border-bottom: 10px solid var(--theme-colour);
+    border-right: 10px solid var(--theme-colour);
     right: 20px;
     bottom: -40px;
 }
@@ -298,8 +298,8 @@ ul {
     position: absolute;
     height: 80px;
     width: 80px;
-    border-top: 10px solid var(--skin-colour);
-    border-left: 10px solid var(--skin-colour);
+    border-top: 10px solid var(--theme-colour);
+    border-left: 10px solid var(--theme-colour);
     left: 20px;
     top: -40px;
 }
@@ -333,7 +333,7 @@ ul {
     content: "";
     height: 5px;
     width: 60px;
-    background-color: var(--skin-colour);
+    background-color: var(--theme-colour);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -343,7 +343,7 @@ ul {
     content: "";
     height: 5px;
     width: 30px;
-    background-color: var(--skin-colour);
+    background-color: var(--theme-colour);
     position: absolute;
     bottom: -15%;
     left: 0;
@@ -376,7 +376,7 @@ ul {
 }
 
 .about .about-content .about-text h3 span.web-dev {
-    color: var(--skin-colour);
+    color: var(--theme-colour);
     text-transform: capitalize;
 }
 
@@ -473,7 +473,7 @@ ul {
     top: 0;
     height: 100%;
     border-radius: 4px;
-    background-color: var(--skin-colour);
+    background-color: var(--theme-colour);
 }
 
 /* ===== About Me Individual Skills Progress Container ===== */
@@ -557,7 +557,7 @@ ul {
     height: 100%;
     left: 7px;
     top: 0;
-    background-color: var(--skin-colour);
+    background-color: var(--theme-colour);
 }
 
 /* ===== About Me Education and Experience Circledot  ===== */
@@ -568,7 +568,7 @@ ul {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: var(--skin-colour);
+    background-color: var(--theme-colour);
 }
 
 .about .about-content .timeline .timeline-date {
@@ -635,13 +635,13 @@ ul {
 
 /* ===== Service Individual Inner Icon Container ===== */
 .service .service-item .service-item-inner:hover .icon {
-    background-color: var(--skin-colour);
+    background-color: var(--theme-colour);
 }
 
 .service .service-item .service-item-inner .icon i.fa {
     font-size: 40px;
     line-height: 60px;
-    color: var(--skin-colour);
+    color: var(--theme-colour);
     transition: var(--transition-3);
 }
 
@@ -738,7 +738,7 @@ ul {
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
-    color: var(--skin-colour);
+    color: var(--theme-colour);
     text-transform: capitalize;
 }
 
@@ -766,7 +766,7 @@ ul {
 
 .contact .contact-info-item .icon .fa {
     font-size: 25px;
-    color: var(--skin-colour);
+    color: var(--theme-colour);
 }
 
 .contact .contact-info-item h4 {
@@ -790,7 +790,7 @@ ul {
     max-width: 100%;
 }
 
-.contact .contact-form  .col-6{
+.contact .contact-form  .col-6 {
     flex: 0 0 50%;
     max-width: 50%;
 }
@@ -852,24 +852,16 @@ ul {
         left: -270px;
     }
 
+    .container {
+        padding:  60px 0px 70px 0;
+    } 
+
     .main-container {
         padding-left: 0px;
     }
 
     .sidebar .hamburger {
         left: 40px;
-    }
-
-    .home .row .home-img::after {
-        height: 70px;
-        width: 70px;
-        bottom: -50px;
-    }
-    
-    .home .row .home-img::before {
-        height: 80px;
-        width: 80px;
-        top: -50px;
     }
 
     .portfolio .portfolio-item .portfolio-item-inner .portfolio-img:hover {
@@ -889,8 +881,7 @@ ul {
     }
 
     .home .row .home-img {
-        flex: 0 0 100%;
-        max-width: 100%;
+        display: none;
     }
 
     .home .row .home-img::after {
@@ -907,9 +898,24 @@ ul {
     }
 
     .portfolio .portfolio-item,
-    .service .service-item {
+    .service .service-item,
+    .contact .contact-info-item {
         flex: 0 0 50%;
         max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    /* .contact .contact-info-item, */
+    .about .about-content .personal-info,
+    .about .about-content .skills,
+    .about .about-content .education,
+    .about .about-content .experience,
+    .service .service-item,
+    .portfolio .portfolio-item,
+    .contact .contact-form .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
