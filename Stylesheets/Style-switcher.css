@@ -1,18 +1,4 @@
 
-:root {
-    --black-bg-1: #e8dfec;
-    --black-bg-2: #fdf9ff;
-    --black-bg-3: #f2f2fc;
-
-    --text-black-1: #504e70;
-    --text-black-2: #302e4d;
-    --white: white;
-
-    /* Transitions */
-    --transition-3: all 0.3s ease-in-out;
-    --transition-4: all 0.4s ease-in-out;
-}
-
 /* ===== STYLE-SWITCHER ===== */
 
 /* ===== THEME, SPIN AND DARK/LIGHT MODE SWITCH CONTAINER ===== */

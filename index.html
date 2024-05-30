@@ -20,12 +20,26 @@
         <!-- ===== FONT AWESOME LINK ===== -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+        <!-- ===== GOOGLE FONT LINK ===== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
         <!-- ===== FAVICON LINK ===== -->
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     </head>
     <body>
         <!-- ===== MAIN CONTAINER START ===== -->
         <div class="main-container">
+            <!-- ===== Hamburger Icon Start ===== -->
+            <div class="hamburger" title="Navigation toggler">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- ===== Hamburger Icon End ===== -->
+            
             <!-- ===== SIDEBAR START===== -->
             <div class="sidebar" title="Sidebar">
                 <!-- ===== Logo Start ===== -->
@@ -34,15 +48,9 @@
                 </div>
                 <!-- ===== Logo End ===== -->
 
-                <!-- ===== Hamburger Icon Start ===== -->
-                <div class="hamburger" title="Navigation toggler">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <!-- ===== Hamburger Icon End ===== -->
-
                 <!-- ===== Navigation Links Start ===== -->
                 <ul class="nav" title="Navigation">
-                    <li title="Home"><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
+                    <li title="Home"><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
                     <li title="About Me"><a href="#about"><i class="fa fa-user"></i>About</a></li>
                     <li title="Services"><a href="#services"><i class="fa fa-list"></i>Services</a></li>
                     <li title="Portfolio"><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
@@ -55,15 +63,20 @@
             <!-- ===== MAIN CONTENT START ===== -->
             <div class="main-content">
                 <!-- ===== HOME SECTION START ===== -->
-                <section class="home section" title="Home">
+                <section class="home section" title="Home" id="home">
                     <div class="width-container">
                         <div class="row">
                             <!-- ===== Introduction Start ===== -->
                             <div class="home-info padd-15" title="Personal description">
-                                <h3 class="intro">Hello, my name is <span class="name" title="Name">BAMTEFA, Olorunshogo Moses</span></h3>
-                                <h3 class="my-profession">I am a <span class="web-dev" title="Profession"> web developer</span></h3>
-                                <p>I am a web developer with extensive experience for over 2 years and a designer for a couple of months now.
-                                    My strength is to create web designs and turn them to responsive and dynamic websites or web pages.</p>
+                                <h3 class="intro">Hello, I'm <span class="name" title="Name">BAMTEFA, Olorunshogo Moses</span></h3>
+                                <h3 class="my-profession">I am a <span class="typing-home" title="Profession"></span>.</h3>
+                                <p>
+                                    I am deeply passionate about crafting visually appealing and user-friendly websites. 
+                                    Proficient in Vue.js, HTML, CSS, and JavaScript, I continuously seek to incorporate the latest design trends and coding techniques into my work. 
+                                    My goal is to create websites that people love using, and I pay a lot of details to make that happen
+                                    I always keep up with the latest design trends and coding techniques to make sure that my work is top-notch. 
+                                    Overall, I just really enjoy making awesome websites that make people happy.
+                                </p>
                                 <a href="#contact" class="btn hire-me" title="Contact">Hire Me</a>
                             </div>
                             <!-- ===== Introduction End ===== -->
@@ -79,7 +92,7 @@
                 <!-- ===== HOME SECTION END ===== -->
 
                 <!-- ===== ABOUT SECTION START ===== -->
-                <section class="about section" title="About Me">
+                <section class="about section" title="About Me" id="about">
                     <div class="container">
                         <!-- ===== Title Start ===== -->
                         <div class="row">
@@ -94,23 +107,50 @@
                             <div class="about-content padd-15">
                                 <div class="row">
                                     <div class="about-text padd-15" title="Introduction">
-                                        <h3>My name is <span class="fullname" title="Full name">BAMTEFA, Olorunshogo Moses</span> and I am a <span class="web-dev" title="Profession"> web developer</span> </h3>
-                                        <p title="Personal description">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laborum!
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, doloremque.
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, beatae.
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, corrupti.
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, beatae.
-                                        </p>
+                                        <h3>My name is <span class="fullname" title="Full name">BAMTEFA, Olorunshogo Moses</span> and I am a <span class="web-dev" title="Profession"> web developer</span>.</h3>
+                                        <div title="Personal description">
+                                            <!-- <p>
+                                                I am a passionate and skilled web developer with [X years] of experience in designing and developing responsive and user-friendly websites. 
+                                                My expertise includes proficiency in front-end technologies such as HTML5, CSS3, JavaScript, and jQuery, as well as experience with modern frameworks like React.js and Vue.js. 
+                                                I have a strong understanding of back-end technologies like Node.js and PHP, along with experience in working with databases such as MySQL and MongoDB.
+                                            </p> -->
+                                            <p>
+                                                I am a passionate and skilled web developer with 2 years of experience in designing and developing responsive and user-friendly websites. 
+                                                My expertise includes proficiency in front-end technologies such as HTML5, CSS3, JavaScript, as well as experience with modern frameworks like Vue.js. 
+                                            </p>
+
+                                            <!-- <p>
+                                                I am adept at translating design mockups into fully functional websites, ensuring cross-browser compatibility and optimal performance. 
+                                                My experience also extends to optimizing websites for speed and accessibility, as well as implementing SEO best practices to enhance online visibility.
+                                            </p> -->
+
+                                            <!-- <p>
+                                                I am a collaborative team player with excellent communication skills, capable of effectively liaising with designers, project managers, and other stakeholders to deliver high-quality solutions on time and within budget. 
+                                                I am always eager to learn and stay updated with the latest trends and technologies in web development to continuously improve my skills and deliver exceptional results.
+                                            </p> -->
+                                            <p>
+                                                I am a collaborative team player with excellent communication skills, capable of effectively liaising with designers, project managers, and other stakeholders to deliver high-quality solutions on time and within budget. 
+                                                I am always eager to learn and stay updated with the latest trends and technologies in web development to continuously improve my skills and deliver exceptional results.
+                                            </p>
+
+                                            <!-- <p>
+                                                Overall, I am confident in my ability to contribute effectively to your team and help achieve your company's goals by leveraging my expertise in web development.
+                                            </p> -->
+                                            <p>
+                                                Overall, I am confident in my ability to contribute effectively to your team and help achieve your company's goals by leveraging my expertise in web development.
+                                            </p>
+
+                                            
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row info-skills-container" title="Personal information and Skills">
                                     <!-- ===== Personal Information Start ===== -->
                                     <div class="personal-info padd-15" title="Personal Information">
                                         <div class="row">
-                                            <div class="info-item" title="Birthday">
+                                            <!-- <div class="info-item" title="Birthday">
                                                 <p>Birthday: <span>July 12, 1999</span></p>
-                                            </div>
+                                            </div> -->
                                             <div class="info-item" title="Age">
                                                 <p>Age: <span id="currentAge"></span></p>
                                             </div>
@@ -118,10 +158,10 @@
                                                 <p>Phone: <span>+23470 12288798</span></p>
                                             </div>
                                             <div class="info-item" title="E-mail">
-                                                <p>Email: <span>info@mygmail.com</span></p>
+                                                <p>Email: <span>shownzy001@gmail</span></p>
                                             </div>
                                             <div class="info-item" title="Location">
-                                                <p>Country: <span>Nigeria</span></p>
+                                                <p>Country: <span>Abuja, Nigeria</span></p>
                                             </div>                                          
                                             <div class="info-item" title="Degree">
                                                 <p>Degree: <span>MEE</span></p>
@@ -129,9 +169,9 @@
                                             <div class="info-item" title="Position">
                                                 <p>Position: <span>Frontend Web Developer</span></p>
                                             </div>                                              
-                                            <div class="info-item" title="My Website">
+                                            <!-- <div class="info-item" title="My Website">
                                                 <p>Website: <span>www.mywebsite.com</span></p>
-                                            </div>                                          
+                                            </div>                                           -->
                                         </div>
                                         <div class="row">
                                             <div class="buttons">
@@ -275,7 +315,7 @@
                 <!-- ===== ABOUT SECTION END ===== -->
                 
                 <!-- ===== SERVICES SECTION START ===== -->
-                <section class="service section" title="Services">
+                <section class="services section" title="Services" id="services">
                     <div class="container">
                         <div class="row">
                             <div class="section-title padd-15" title="Services">
@@ -372,7 +412,7 @@
                 <!-- ===== SERVICES SECTION END ===== -->
 
                 <!-- ===== PORTFOLIO SECTION START ===== -->
-                <section class="portfolio section" title="Portfolio">
+                <section class="portfolio section" title="Portfolio" id="portfolio">
                     <div class="container">
                         <div class="row" title="Portfolio">
                             <div class="section-title padd-15" title="Portfolio">
@@ -468,7 +508,7 @@
                 <!-- ===== PORTFOLIO SECTION END ===== -->
 
                 <!-- ===== CONTACT SECTION START ===== -->
-                <section class="contact section" title="Contact">
+                <section class="contact section" title="Contact" id="contact">
                     <div class="container">
                         <div class="row">
                             <div class="section-title padd-15" title="Contact Me">
@@ -548,6 +588,21 @@
                     </div>
                 </section>
                 <!-- ===== CONTACT SECTION END ===== -->
+
+                <!-- ===== FOOTER SECTION START ===== -->
+                <footer class="footer section" title="Footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer">
+                                Designed By <a href="#">BAMTEFA Olorunshogo Moses</a> |
+                            </div>
+                            <div class="copyright">
+                                &copy <span id="year"></span>, All rights reserved
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- ===== CONTACT SECTION END ===== -->
             </div>
             <!-- ===== MAIN CONTENT END ===== -->
         </div>        
@@ -566,13 +621,15 @@
                 <span class="colour-1" onclick="setActiveStyle('colour-1')"></span>
                 <span class="colour-2" onclick="setActiveStyle('colour-2')"></span>
                 <span class="colour-3" onclick="setActiveStyle('colour-3')"></span>
-                <span class="colour-3" onclick="setActiveStyle('colour-3')"></span>
+                <span class="colour-4" onclick="setActiveStyle('colour-4')"></span>
                 <span class="colour-5" onclick="setActiveStyle('colour-5')"></span>
             </div>
         </div>
         <!-- STYLE SWITCHER END ===== -->
         
-        <!-- ===== JavaScript File ===== -->
+        <!-- ===== JS FILE ===== -->
         <script src="/main.js"></script>
+        <script src="/script.js"></script>
+        <!-- ===== JQUERY ANIMATED SCRIPT TAG ===== -->
     </body>
 </html>
