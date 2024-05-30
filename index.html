@@ -4,14 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Portfolio | Home</title>
-        <!-- CSS Files -->
+
+        <!-- ===== CSS FILES ===== -->
         <link rel="stylesheet" href="/Stylesheets/index-style.css">
         <link rel="stylesheet" href="/Stylesheets/theme1.css">
+
+        <!-- ===== STYLE SWITCHER ===== -->
         <link rel="stylesheet" href="Stylesheets/Style-switcher.css">
+        <link rel="stylesheet" href="Stylesheets/theme1.css" class="alternate-style" title="colour-1" disabled>
+        <link rel="stylesheet" href="Stylesheets/theme2.css" class="alternate-style" title="colour-2" disabled>
+        <link rel="stylesheet" href="Stylesheets/theme3.css" class="alternate-style" title="colour-3" disabled>
+        <link rel="stylesheet" href="Stylesheets/theme4.css" class="alternate-style" title="colour-4" disabled>
+        <link rel="stylesheet" href="Stylesheets/theme5.css" class="alternate-style" title="colour-5" disabled>        
         
-        <!-- Font Awesome Link -->
+        <!-- ===== FONT AWESOME LINK ===== -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <!-- Favicon -->
+
+        <!-- ===== FAVICON LINK ===== -->
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     </head>
     <body>
@@ -547,24 +556,23 @@
         <!-- STYLE SWITCHER START ===== -->
         <div class="style-switcher">
             <div class="style-switcher-toggler s-icon">
-                <i class="fas fa-cog fa-skin"></i>
+                <i class="fas fa-cog fa-spin"></i>
             </div>
             <div class="day-night s-icon">
                 <i class="fas fa-moon"></i>
             </div>
             <h4>Theme Colours</h4>
             <div class="colours">
-                <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-                <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-                <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-                <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-                <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-
+                <span class="colour-1" onclick="setActiveStyle('colour-1')"></span>
+                <span class="colour-2" onclick="setActiveStyle('colour-2')"></span>
+                <span class="colour-3" onclick="setActiveStyle('colour-3')"></span>
+                <span class="colour-3" onclick="setActiveStyle('colour-3')"></span>
+                <span class="colour-5" onclick="setActiveStyle('colour-5')"></span>
             </div>
         </div>
         <!-- STYLE SWITCHER END ===== -->
         
         <!-- ===== JavaScript File ===== -->
-        <script src="main.js"></script>
+        <script src="/main.js"></script>
     </body>
 </html>

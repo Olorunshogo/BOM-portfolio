@@ -1,3 +1,21 @@
+
+:root {
+    --black-bg-1: #e8dfec;
+    --black-bg-2: #fdf9ff;
+    --black-bg-3: #f2f2fc;
+
+    --text-black-1: #504e70;
+    --text-black-2: #302e4d;
+    --white: white;
+
+    /* Transitions */
+    --transition-3: all 0.3s ease-in-out;
+    --transition-4: all 0.4s ease-in-out;
+}
+
+/* ===== STYLE-SWITCHER ===== */
+
+/* ===== THEME, SPIN AND DARK/LIGHT MODE SWITCH CONTAINER ===== */
 .style-switcher {
     position: fixed;
     right: 0;
@@ -9,4 +27,79 @@
     z-index: 10;
     border-radius: 5px;
     transition: var(--transition-4);
+    transform: translateX(100%);
+}
+
+.style-switcher.open {
+    transform: translate(-25px);
+}
+
+/* ===== Style Witcher: Dark/Light Mode Switch and Spin Icon Container ===== */
+.style-switcher .s-icon {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: var(--text-black-2);
+    right: 100%;
+    margin-right: 25px;
+    background-color: var(--black-bg-2);
+    border: 1px solid var(--black-bg-1);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transition-4)
+}
+
+.style-switcher .s-icon i {
+    line-height: 40px;
+}
+
+/* ===== Style Witcher: Spin Icon Container ===== */
+.style-switcher .style-switcher-toggler {
+    top: 0;
+}
+
+/* ===== Style Witcher: Dark/Light Mode Switch ===== */
+.style-switcher .day-night {
+    top: 55%;
+}
+
+.style-switcher .colours {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.style-switcher h4 {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: 600;
+    text-transform: capitalize;
+}
+
+.style-switcher .colours span {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    border: 1px solid red;
+}
+
+.style-switcher .colours .colour-1 {
+    background-color: #ec1839;
+}
+.style-switcher .colours .colour-2 {
+    background-color: #fa5b0f;
+}
+.style-switcher .colours .colour-3 {
+    background-color: #37b182;
+}
+.style-switcher .colours .colour-4 {
+    background-color: #1854b4;
+}
+.style-switcher .colours .colour-5 {
+    background-color: #f021b2;
 }
