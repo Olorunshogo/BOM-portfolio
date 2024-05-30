@@ -77,3 +77,28 @@ window.addEventListener("load", () => {
         dayNight.querySelector("i").classList.add("fa-moon");
     }
 })
+
+const hamburger = document.querySelector(".hamburger-container");
+hamburger.addEventListener("click", function() {
+    document.querySelector(".sidebar").style.display = "flex";
+    document.querySelector(".hamburger-container").style.display = "none";
+})
+
+const close = document.querySelector(".close");
+close.addEventListener("click", function() {
+    document.querySelector(".sidebar").style.display = "none";
+    document.querySelector(".hamburger-container").style.display = "flex";
+})
+
+function addActiveClass() {
+    var links = document.querySelectorAll(".nav a");
+
+    // Remove the class from other links
+    for (var i = 0; i < links.length; i++) {
+        links[i].classList.remove("active");
+    }
+
+    // Add the class to the clicked link
+    links.classList.add(".active");
+}
+

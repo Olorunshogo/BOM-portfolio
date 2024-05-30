@@ -52,6 +52,10 @@ body.dark {
 }
 
 /* ===== UTILITY STYLES ===== */
+/* ===== PARAGRAPH ===== */
+p {
+    font-size: 16px;
+}
 
 /* ===== LINKS ===== */
 a {
@@ -111,23 +115,26 @@ ul {
     position: relative;
 }
 
-/* ===== NAVIGATION Toggler ===== */
-.hamburger {
+/* ===== HAMBURGER Toggler ===== */
+.hamburger-container {
     width: 50px;
     height: 40px;
     border: 1px solid var(--black-bg-1);
     position: fixed;
-    left: 300px;
-    top: 20px;
+    right: -270px;
+    top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     background-color: var(--black-bg-2);
     cursor: pointer;
+    transition: var(--transition-3);
+    display: none;
 }
 
-.hamburger i.fa-solid.fa-bars {
+.close-container i.fa-solid,
+.hamburger-container i.fa-solid.fa-bars {
     width: 26px;
     font-size: 22px;
     height: 25px;
@@ -136,6 +143,24 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.close-container {
+    width: 50px;
+    height: 40px;
+    border: 1px solid var(--black-bg-1);
+    position: fixed;
+    left: 150px;
+    top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--black-bg-2);
+    cursor: pointer;
+    transition: var(--transition-3);
+    z-index: 50;
+    display: none;
 }
 
 /* ===== SIDEBAR ===== */
@@ -162,7 +187,7 @@ ul {
     text-transform: capitalize;
 }
 
-.sidebar .logo a {
+.sidebar .logo p {
     color: var(--text-black-2);
     font-weight: 700;
     padding: 15px 20px;
@@ -170,7 +195,7 @@ ul {
     letter-spacing: 5px;
 }
 
-.sidebar .logo a::before {
+.sidebar .logo p::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -181,7 +206,7 @@ ul {
     left: 0;
 }
 
-.sidebar .logo a::after {
+.sidebar .logo p::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -192,7 +217,7 @@ ul {
     right: 0;
 }
 
-.sidebar .logo a .bom {
+.sidebar .logo .bom {
     font-family: "Clicker Script", cursive;
     font-size: 40px;
     padding: 15px 20px;
@@ -278,7 +303,7 @@ ul {
 
 .home .row .home-info p {
     margin-bottom: 70px;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-black-1);
 
 }
@@ -291,17 +316,6 @@ ul {
     position: relative;
 } 
 
-.home .row .home-img::after {
-    content: "";
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--theme-colour);
-    border-right: 10px solid var(--theme-colour);
-    right: 20px;
-    bottom: 50px;
-}
-
 .home .row .home-img::before {
     content: "";
     position: absolute;
@@ -311,6 +325,17 @@ ul {
     border-left: 10px solid var(--theme-colour);
     left: 20px;
     top: -40px;
+}
+
+.home .row .home-img::after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid var(--theme-colour);
+    border-right: 10px solid var(--theme-colour);
+    right: 20px;
+    bottom: 0;
 }
 
 .home .row .home-img img {
@@ -391,7 +416,6 @@ ul {
 
 .about .about-content .about-text p {
     color: var(--text-black-1);
-    font-size: 16px;
     line-height: 25px;
 }
 
@@ -600,7 +624,6 @@ ul {
 
 .about .about-content .timeline .timeline-text {
     line-height: 25px;
-    font-size: 16px;
     color: var(--text-black-1);
     text-align: justify;
 }
@@ -668,7 +691,6 @@ ul {
 }
 
 .services .service-item .service-item-inner p {
-    font-size: 16px;
     color: var(--text-black-2);
     line-height: 25px;
 }
@@ -855,23 +877,173 @@ ul {
     } 
 }
 
+@media only screen and (max-width: 1370px) {
+    .container {
+        padding:  20px 0px 30px 0;
+    } 
+}
+
 /* ===== RESPONSIVENESS for max-width: 1200px ===== */
 @media only screen and (max-width: 1200px) {
-    .sidebar {
-        left: -270px;
+    .btn {
+        font-size: 16px;
+        padding: 8px 25px;
     }
 
-    .container {
-        padding:  60px 0px 70px 0;
-    } 
+    p {
+        font-size: 14px;
+    }
+
+    .sidebar {
+        width: 220px;
+        padding: 10px;
+        display: none;
+    }
+
+    .sidebar .logo {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .sidebar .logo p {
+        padding: 8px 15px;
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .sidebar .logo p::before {
+        left: 5px;
+        border-bottom: 4px solid var(--theme-colour);
+        border-left: 4px solid var(--theme-colour);
+    }
+
+    .sidebar .logo p::after {
+        right: 5px;
+        border-top: 4px solid var(--theme-colour);
+        border-right: 4px solid var(--theme-colour);
+    }
+
+    .sidebar .logo .bom {
+        font-family: "Clicker Script", cursive;
+        font-size: 35px;
+        padding: 10px;
+    }
+
+    .sidebar .nav li {
+        margin-bottom: 10px;
+    }
+
+    .sidebar .nav li a {
+        font-size: 14px;
+        padding: 4px 15px;
+    }
 
     .main-container {
         padding-left: 0px;
     }
 
-    .hamburger {
-        left: 40px;
+    .hamburger-container {
+        display: flex;
+        z-index: 90;
+        right: 20px;
+        top: 10px;
     }
+
+    .close-container {
+        display: flex;
+    }
+
+    .padd-15 {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .home .row .home-img::after {
+        bottom: 50px;
+    }
+
+    .home .row .home-info h3.intro {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+
+    .home .row .home-info h3.intro span.name,
+    .home .row .home-info h3.my-profession,
+    .home .row .home-info span.typing-home {
+        font-size: 25px;
+    }
+
+    .home .row .home-info p {
+        font-size: 14px;
+        margin-bottom: 40px;   
+    }
+
+    .home .row .home-img::after {
+        bottom: -30px;
+    } 
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .section-title h2:before {
+        width: 50px;
+    }
+
+    .section-title h2:after {
+        width: 25px;
+    }   
+
+    .about .about-content .about-text h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .about .about-content .about-text p {
+        margin-bottom: 8px;
+    }
+
+    .about .about-content .personal-info {
+        margin-top: 20px;
+    }
+
+    .about .about-content .personal-info .row .info-item p {
+        padding: 8px 0;
+    }
+
+    .about .about-content .education,
+    .about .about-content .experience {
+        margin-top: 15px;
+    }
+
+    .about .about-content .education h3,
+    .about .about-content .experience h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    .about .about-content .timeline {
+        padding: 20px 15px;
+    }
+
+    .about .about-content .timeline .timeline-date {
+        font-size: 12px;
+    }
+
+    .about .about-content .timeline .timeline-title,
+    .services .service-item .service-item-inner h4 {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    
 
     .portfolio .portfolio-item .portfolio-item-inner .portfolio-img:hover {
         border: 4px solid var(--black-bg-2);
