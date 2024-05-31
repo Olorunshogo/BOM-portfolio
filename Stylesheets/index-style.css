@@ -61,6 +61,13 @@ p {
 a {
     text-decoration: none;
     cursor:pointer;
+    transition: var(--transition-3);
+}
+
+a:hover {
+    text-decoration: none;
+    cursor:pointer;
+    color: var(--theme-colour);
 }
 
 /* ===== Unordered Lists ===== */
@@ -511,16 +518,19 @@ ul {
 
 /* ===== About Me Individual Skills Progress Container ===== */
 .about .about-content .skills .skill-item .progress #html-progress {
-    width: 94%;
+    width: 96%;
 }
 .about .about-content .skills .skill-item .progress #css-progress {
     width: 90%;
 }
 .about .about-content .skills .skill-item .progress #js-progress {
-    width: 35%;
+    width: 45%;
 }
 .about .about-content .skills .skill-item .progress #vue-progress {
-    width: 6%;
+    width: 8%;
+}
+.about .about-content .skills .skill-item .progress #git {
+    width: 70%;
 }
 
 .about .about-content .skills .skill-item .progress .skill-percent {
@@ -626,6 +636,25 @@ ul {
     line-height: 25px;
     color: var(--text-black-1);
     text-align: justify;
+}
+
+.about .about-content .details {
+    list-style-type:disc;
+    font-size: 14px;
+    margin: 20px 0 0 20px;
+}
+
+.about .about-content .details li {
+    margin: 5px 0;
+}
+
+.about .about-content .details .detail-item {
+    font-weight: 600;
+    transition: var(--transition-3);
+}
+
+.about .about-content .details .detail-item:hover {
+    color: var(--theme-colour);
 }
 
 /* ===== SERVICES SECTION ===== */
@@ -870,6 +899,19 @@ ul {
     padding: 0 50px;
 }
 
+
+/* ===== FOOTER SECTION ===== */
+.footer {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer .row {
+    margin: 0 auto;
+    font-weight: 600;
+}
+
 /* ===== RESPONSIVENESS for max-width: 1800px ===== */
 @media only screen and (max-width: 1800px) {
     .container {
@@ -1083,6 +1125,19 @@ ul {
     .contact .contact-info-item {
         flex: 0 0 50%;
         max-width: 50%;
+    }
+
+    .footer .row {
+        margin: 0 auto;
+        font-weight: 500;
+        /* flex: 0 0 50%;
+        max-width: 50%; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .row > div {
+        margin: 0 auto;
     }
 }
 
