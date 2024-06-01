@@ -69,7 +69,9 @@ dayNight.addEventListener("click", function() {
     dayNight.querySelector("i").classList.toggle("fa-moon");
     document.body.classList.contains("dark");
 })
-window.addEventListener("load", () => {
+
+// =================== TOGGLE MOON AND SUN ICON
+window.addEventListener("load", function() {
     if(document.body.classList.contains("dark")) {
         dayNight.querySelector("i").classList.add("fa-sun");
     }
@@ -78,20 +80,23 @@ window.addEventListener("load", () => {
     }
 })
 
+// =================== HAMBURGER ICON DISPLAY SIDEBAR AND DISAPPEAR
 const hamburger = document.querySelector(".hamburger-container");
 hamburger.addEventListener("click", function() {
     document.querySelector(".sidebar").style.display = "flex";
     document.querySelector(".hamburger-container").style.display = "none";
 })
 
+// =================== TIMES ICON CLOSE SIDEBAR
 const close = document.querySelector(".close");
 close.addEventListener("click", function() {
     document.querySelector(".sidebar").style.display = "none";
     document.querySelector(".hamburger-container").style.display = "flex";
 })
 
+
 function addActiveClass() {
-    var links = document.querySelectorAll(".nav a");
+    var links = document.getElementsByTagName("a");
 
     // Remove the class from other links
     for (var i = 0; i < links.length; i++) {
@@ -99,6 +104,30 @@ function addActiveClass() {
     }
 
     // Add the class to the clicked link
-    links.classList.add(".active");
+    links.classList.add("active");
 }
+
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    var formData = new FormData(this); // Get form data
+    
+    // Send form data to server (you can use Fetch API or XMLHttpRequest)
+    fetch("/submit.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success message
+            console.log("Form submitted successfully!");
+        } else {
+            // Error message
+            console.error("Error submitting form");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+});
 

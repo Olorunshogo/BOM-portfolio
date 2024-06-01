@@ -99,6 +99,33 @@ ul {
     transform: scale(0.94);
 }
 
+.brands {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 210px;
+    margin-top: 5rem;
+}
+
+.brands .brand-icon {
+    font-size: 25px;
+    font-weight: 500;
+    height: 50px;
+    width: 50px;
+    background-color: var(--theme-colour);
+    padding: 8px;
+    color: var(--white);
+    border-radius: 50%;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-3);
+}
+
 /* ===== Dark Box-shadow ===== */
 .shadow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
@@ -184,6 +211,7 @@ ul {
     justify-content: center;
     align-items: center;
     z-index: 10;
+    cursor: default;
 }
 
 /* ===== Sidebar Logo ===== */
@@ -638,10 +666,12 @@ ul {
     text-align: justify;
 }
 
+/* ===== About Me Education and Experience Unordered List  ===== */
 .about .about-content .details {
     list-style-type:disc;
     font-size: 14px;
-    margin: 20px 0 0 20px;
+    margin: 10px 0 0 15px;
+    line-height: 24px;
 }
 
 .about .about-content .details li {
@@ -673,7 +703,7 @@ ul {
 /* ===== Service Individual Inner Container ===== */
 .services .service-item .service-item-inner {
     border-radius: 10px;
-    padding: 30px 15px;
+    padding: 20px 15px;
     text-align: center;
     border: 1px solid var(--black-bg-1);
     background-color: var(--black-bg-2);
@@ -848,6 +878,7 @@ ul {
 .contact .contact-form {
     flex: 0 0 100%;
     max-width: 100%;
+    position: relative;
 }
 
 .contact .contact-form  .col-6 {
@@ -860,9 +891,16 @@ ul {
     max-width: 100%;
 }
 
-/* ===== Contact Input Fields ===== */
+/* ===== Contact Input Fields Container ===== */
 .contact .contact-form .form-item {
+    position: relative;
     margin-bottom: 30px;
+}
+
+/* ===== Contact Required Label Container ===== */
+.contact .contact-form .form-item .required {
+    color: var(--theme-colour);
+    display: flex;
 }
 
 /* ===== Contact Input Field ===== */
@@ -877,12 +915,14 @@ ul {
     caret-color: var(--text-black-2);
     background-color: var(--black-bg-2);
     transition: var(--transition-4);
+    cursor: pointer;
 }
 
 .contact .contact-form .form-item .form-control:focus {
     border: 1px solid var(--black-bg-1);
     width: 100%;
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    cursor:auto;
 }
 
 .contact .contact-form .form-item .form-control::placeholder {
@@ -1048,7 +1088,11 @@ ul {
     }
 
     .about .about-content .about-text p {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
+    }
+
+    .about .about-content .details {
+        font-size: 13px;
     }
 
     .about .about-content .personal-info {
@@ -1084,8 +1128,6 @@ ul {
         font-weight: 600;
         font-size: 16px;
     }
-
-    
 
     .portfolio .portfolio-item .portfolio-item-inner .portfolio-img:hover {
         border: 4px solid var(--black-bg-2);
@@ -1152,6 +1194,19 @@ ul {
     .contact .contact-form .col-6 {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .about .about-content .personal-info .row {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about .about-content .personal-info .row .info-item p span {
+        display: inline;
     }
 }
 
